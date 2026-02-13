@@ -1,4 +1,28 @@
-import 'package:belajar_flutter/tugas1/scaffold.dart';
+import 'package:flutter/material.dart';
+import 'tugas2/tugas_2.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'My Profile',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFD81B60)),
+        useMaterial3: true,
+      ),
+      home: const Tugas2(), // Tampilkan halaman profil langsung
+    );
+  }
+}
+
+
+/*import 'package:belajar_flutter/tugas1/tugas_1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +55,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ScaffoldTugas1(),
+      home: Tugas1(),
     );
   }
 }
@@ -120,4 +144,4 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
-}
+} */
