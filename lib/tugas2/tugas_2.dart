@@ -28,10 +28,10 @@ class Tugas2 extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
-                radius: 60,
+                radius: 50,
                 backgroundImage: AssetImage("assets/images/bening.jpg"),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
               Text(
                 'Bening Restu A.',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
@@ -84,7 +84,7 @@ class Tugas2 extends StatelessWidget {
                         Icon(
                           Icons.email,
                           color: Color.fromARGB(255, 226, 16, 153),
-                          size: 20,
+                          size: 15,
                         ),
                         Spacer(),
                         SizedBox(width: 16),
@@ -105,7 +105,7 @@ class Tugas2 extends StatelessWidget {
                         Icon(
                           Icons.location_city,
                           color: Color.fromARGB(255, 226, 16, 153),
-                          size: 20,
+                          size: 15,
                         ),
                         Spacer(),
                         SizedBox(width: 16),
@@ -123,7 +123,7 @@ class Tugas2 extends StatelessWidget {
                         Icon(
                           Icons.call,
                           color: Color.fromARGB(255, 226, 16, 153),
-                          size: 20,
+                          size: 15,
                         ),
                         Spacer(),
                         SizedBox(width: 16),
@@ -137,22 +137,25 @@ class Tugas2 extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    flex: 2,
+                    flex: 1,
                     child: Container(
                       color: Color.fromARGB(255, 255, 203, 242),
-                      child: Text("Ipk: 3,5"),
+                      alignment: Alignment.centerLeft, // Teks IPK di tengah
+                      child: Text("IPK: 3,5"),
                     ),
                   ),
                   Expanded(
                     flex: 1,
                     child: Container(
                       color: Color.fromARGB(255, 255, 203, 242),
+                      alignment: Alignment.centerRight,
+                      padding: EdgeInsets.only(right: 12),
                       child: Text("Jumlah SKS: 53"),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 20),
               Padding(
                 padding: EdgeInsets.all(16),
                 child: Text(
@@ -168,11 +171,12 @@ class Tugas2 extends StatelessWidget {
               Container(
                 width: 150,
                 height: 150,
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black),
                   image: DecorationImage(
                     image: AssetImage('assets/images/zawj.jpeg'),
                   ),
-                  color: Color.fromARGB(255, 255, 245, 248),
                 ),
               ),
             ],
