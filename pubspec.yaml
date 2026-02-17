@@ -17,3 +17,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/charity_event.jpg
+    - assets/images/quran_study.jpg
+    - assets/images/tech_workshop.jpg
+    - assets/images/volunteering.jpg
+    - assets/images/nature_walk.jpg
+    - assets/images/kegiatan_majelis.jpg
+    - assets/images/bening.jpg 
+    - assets/images/zawj.jpg 
