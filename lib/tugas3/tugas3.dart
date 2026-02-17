@@ -1,23 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(home: const MainPage()));
+  runApp(MaterialApp(home: const Tugas3()));
 }
 
-class MainPage extends StatelessWidget {
-  const MainPage({super.key});
+class Tugas3 extends StatelessWidget {
+  const Tugas3({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<String> lifestyleLabels = [
-      "Quran Study",
-      "Volunteering",
-      "Kegiatan Majelis",
-      "Tech Workshop",
-      "Nature Walk",
-      "Charity Event",
-    ];
-
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -57,67 +48,37 @@ class MainPage extends StatelessWidget {
       ),
 
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 24.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextField(
               decoration: InputDecoration(
-                labelText: 'Masukkan Nama Lengkap Anda...  ',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                filled: true,
-                fillColor: Colors.white,
+                labelText: 'Masukkan Nama Lengkap Anda',
+              ),
+            ),
+            SizedBox(height: 16),
+
+            TextField(
+              decoration: InputDecoration(labelText: 'Masukkan Pekerjaan Anda'),
+            ),
+            SizedBox(height: 16),
+
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Masukkan Nomor Telepon Anda',
               ),
             ),
             SizedBox(height: 16),
 
             TextField(
               decoration: InputDecoration(
-                labelText: 'Masukkan Pekerjaan Anda...  ',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                filled: true,
-                fillColor: Colors.white,
+                labelText: 'Ceritakan Tentang Diri Anda',
               ),
             ),
             SizedBox(height: 16),
-
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'Masukkan Nomor Telepon Anda...  ',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                filled: true,
-                fillColor: Colors.white,
-              ),
-            ),
-            SizedBox(height: 16),
-
-            TextField(
-              maxLines: 3,
-              decoration: InputDecoration(
-                labelText: 'Ceritakan Tentang Diri Anda...  ',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide(color: Colors.black),
-                ),
-                filled: true,
-                fillColor: Colors.white,
-              ),
-            ),
-            SizedBox(height: 20),
             Padding(padding: EdgeInsetsGeometry.symmetric(vertical: 15)),
 
-            //header untuk grid
             Text(
-              "Share Your LifeStyle !! ",
+              "Share Your Lifestyle !!",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -130,90 +91,52 @@ class MainPage extends StatelessWidget {
               crossAxisCount: 3,
               mainAxisSpacing: 8,
               crossAxisSpacing: 8,
-              childAspectRatio: 1.0,
+              childAspectRatio: 1,
               shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+              physics: NeverScrollableScrollPhysics(),
 
-              children: lifestyleLabels.map((label) {
-                final fileName = label
-                    .toLowerCase()
-                    .replaceAll(' ', '_')
-                    .replaceAll('majelis', 'majelis')
-                    .replaceAll('kegiatan', 'kegiatan');
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlueAccent,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
 
-                return Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black,
-                            blurRadius: 4,
-                            offset: Offset(0, 2),
-                          ),
-                        ],
-                      ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.pinkAccent,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
 
-                      child: ClipRRect(
-                        borderRadius: BorderRadiusGeometry.circular(12),
-                        child: Image.asset(
-                          'assets/images/$fileName.jpg',
-                          fit: BoxFit.cover,
-                          height: double.infinity,
-                          width: double.infinity,
-                        ),
-                      ),
-                    ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
 
-                    Positioned(
-                      top: 8,
-                      right: 8,
-                      child: Container(
-                        width: 24,
-                        height: 24,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: const Color.fromARGB(255, 249, 235, 246),
-                        ),
-                        child: Center(
-                          child: Icon(
-                            Icons.add,
-                            color: Color.fromARGB(255, 239, 97, 144),
-                            size: 20,
-                          ),
-                        ),
-                      ),
-                    ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.cyanAccent,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
 
-                    Positioned(
-                      left: 0,
-                      right: 0,
-                      bottom: 8,
-                      child: Container(
-                        width: 24,
-                        height: 24,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          color: const Color.fromARGB(255, 249, 235, 246),
-                        ),
-                        child: Center(
-                          child: Text(
-                            label,
-                            textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              color: Color.fromARGB(255, 255, 110, 209),
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                );
-              }).toList(),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.lightGreen,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
