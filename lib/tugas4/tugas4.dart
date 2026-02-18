@@ -11,15 +11,15 @@ class Tugas4 extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, dynamic>> friends = [
       {
-        'name': 'Jakarta Pusat',
-        'desc': 'PPKD',
-        'icon': Icons.location_city,
+        'name': 'Bening',
+        'desc': 'PPKD Jakpus',
+        'icon': Icons.person,
         'color': Color(0xFF4A557F),
       },
       {
-        'name': 'App Dev',
+        'name': 'Pak Habibie App Dev',
         'desc': 'Developer',
-        'icon': Icons.code,
+        'icon': Icons.person,
         'color': Color(0xFF9FA8DA),
       },
       {
@@ -31,13 +31,13 @@ class Tugas4 extends StatelessWidget {
       {
         'name': 'Siti Aminah',
         'desc': 'Dosen',
-        'icon': Icons.school,
+        'icon': Icons.person,
         'color': Color(0xFF4A557F),
       },
       {
         'name': 'Ahmad Rizki',
         'desc': 'Programmer',
-        'icon': Icons.computer,
+        'icon': Icons.person,
         'color': Color(0xFF9FA8DA),
       },
     ];
