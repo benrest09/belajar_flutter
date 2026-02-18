@@ -9,7 +9,7 @@ class Tugas4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, dynamic>> friends = [
+    final List<Map<String, dynamic>> teman = [
       {
         'name': 'Bening',
         'desc': 'PPKD Jakpus',
@@ -17,8 +17,8 @@ class Tugas4 extends StatelessWidget {
         'color': Color(0xFF4A557F),
       },
       {
-        'name': 'Pak Habibie App Dev',
-        'desc': 'Developer',
+        'name': 'Pak Habibie',
+        'desc': 'App Developer',
         'icon': Icons.person,
         'color': Color(0xFF9FA8DA),
       },
@@ -96,7 +96,7 @@ class Tugas4 extends StatelessWidget {
           SizedBox(height: 16),
 
           Text(
-            "Daftar Teman Anda",
+            "Daftar Kontak Anda",
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -112,16 +112,16 @@ class Tugas4 extends StatelessWidget {
             childAspectRatio: 2.5,
             shrinkWrap: true,
             physics: NeverScrollableScrollPhysics(),
-            children: friends.map((friend) {
+            children: teman.map((teman) {
               return Container(
                 decoration: BoxDecoration(
-                  color: friend['color'],
+                  color: teman['color'],
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: ListTile(
-                  leading: Icon(friend['icon'], size: 30, color: Colors.white),
+                  leading: Icon(teman['icon'], size: 30, color: Colors.white),
                   title: Text(
-                    friend['name'],
+                    teman['name'],
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -129,7 +129,7 @@ class Tugas4 extends StatelessWidget {
                     ),
                   ),
                   subtitle: Text(
-                    friend['desc'],
+                    teman['desc'],
                     style: TextStyle(fontSize: 12, color: Colors.white70),
                   ),
                 ),
