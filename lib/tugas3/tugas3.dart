@@ -96,45 +96,106 @@ class Tugas3 extends StatelessWidget {
               physics: NeverScrollableScrollPhysics(),
 
               children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.pinkAccent,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+                Stack(
+                  children: [
+                    Positioned(
+                      width: 380,
+                      height: 380,
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 228, 12, 52),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Icons.add, size: 30),
+                      ),
+                    ),
+                  ],
                 ),
 
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.deepPurple,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+                Stack(
+                  children: [
+                    Positioned(
+                      width: 380,
+                      height: 380,
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 255, 99, 64),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Icons.add, size: 30),
+                      ),
+                    ),
+                  ],
                 ),
 
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.cyanAccent,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+                Stack(
+                  children: [
+                    Positioned(
+                      width: 380,
+                      height: 380,
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 64, 255, 115),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Icons.add, size: 30),
+                      ),
+                    ),
+                  ],
                 ),
 
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.lightGreen,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+                Stack(
+                  children: [
+                    Positioned(
+                      width: 380,
+                      height: 380,
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 64, 77, 255),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Icons.add, size: 30),
+                      ),
+                    ),
+                  ],
+                ),
+
+                Stack(
+                  children: [
+                    Positioned(
+                      width: 380,
+                      height: 380,
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 247, 139, 198),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Icons.add, size: 30),
+                      ),
+                    ),
+                  ],
+                ),
+
+                Stack(
+                  children: [
+                    Positioned(
+                      width: 380,
+                      height: 380,
+                      child: Container(
+                        padding: EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 12, 79, 109),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(Icons.add, size: 30),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
